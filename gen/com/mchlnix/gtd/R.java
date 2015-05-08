@@ -1904,6 +1904,9 @@ containing a value of this type.
         public static final int ic_launcher=0x7f02003b;
     }
     public static final class id {
+        public static final int LinearLayout1=0x7f090052;
+        public static final int LinearLayout2=0x7f090051;
+        public static final int LinearLayout3=0x7f090050;
         public static final int action_bar=0x7f090040;
         public static final int action_bar_activity_content=0x7f090003;
         public static final int action_bar_container=0x7f09003f;
@@ -1917,7 +1920,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003d;
         public static final int action_mode_bar_stub=0x7f09003c;
         public static final int action_mode_close_button=0x7f090025;
-        public static final int action_settings=0x7f090051;
+        public static final int action_settings=0x7f090053;
         public static final int activity_chooser_view_content=0x7f090026;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
@@ -1966,7 +1969,6 @@ containing a value of this type.
         public static final int search_plate=0x7f090048;
         public static final int search_src_text=0x7f090049;
         public static final int search_voice_btn=0x7f09004d;
-        public static final int section_label=0x7f090050;
         public static final int select_dialog_listview=0x7f09004e;
         public static final int shortcut=0x7f090039;
         public static final int showCustom=0x7f090010;
@@ -2043,11 +2045,13 @@ containing a value of this type.
         public static final int abc_select_dialog_material=0x7f030017;
         public static final int abc_simple_dropdown_hint=0x7f030018;
         public static final int activity_overview=0x7f030019;
-        public static final int fragment_overview=0x7f03001a;
-        public static final int select_dialog_item_material=0x7f03001b;
-        public static final int select_dialog_multichoice_material=0x7f03001c;
-        public static final int select_dialog_singlechoice_material=0x7f03001d;
-        public static final int support_simple_spinner_dropdown_item=0x7f03001e;
+        public static final int fragment_later_maybe=0x7f03001a;
+        public static final int fragment_next_action=0x7f03001b;
+        public static final int fragment_projects=0x7f03001c;
+        public static final int select_dialog_item_material=0x7f03001d;
+        public static final int select_dialog_multichoice_material=0x7f03001e;
+        public static final int select_dialog_singlechoice_material=0x7f03001f;
+        public static final int support_simple_spinner_dropdown_item=0x7f030020;
     }
     public static final class menu {
         public static final int overview=0x7f0c0000;
@@ -2323,6 +2327,7 @@ containing a value of this type.
     
          */
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0b00a3;
+        public static final int NoActionBar=0x7f0b011d;
         public static final int Platform_AppCompat=0x7f0b00f4;
         public static final int Platform_AppCompat_Light=0x7f0b00f5;
         public static final int Platform_ThemeOverlay_AppCompat_Dark=0x7f0b0109;

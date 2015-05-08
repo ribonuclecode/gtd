@@ -128,7 +128,12 @@ public class Overview extends ActionBarActivity implements
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a PlaceholderFragment (defined as a static inner class
 			// below).
-			return PlaceholderFragment.newInstance(position + 1);
+			switch(position) {
+			case 0: return NextActionFragment.newInstance();
+			case 1: return ProjectsFragment.newInstance();
+			case 2: return LaterMaybeFragment.newInstance();
+			}
+			return null;
 		}
 
 		@Override
@@ -151,11 +156,11 @@ public class Overview extends ActionBarActivity implements
 			return null;
 		}
 	}
-
+	
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
-	public static class PlaceholderFragment extends Fragment {
+	public static class ProjectsFragment extends Fragment {
 		/**
 		 * The fragment argument representing the section number for this
 		 * fragment.
@@ -165,22 +170,90 @@ public class Overview extends ActionBarActivity implements
 		/**
 		 * Returns a new instance of this fragment for the given section number.
 		 */
-		public static PlaceholderFragment newInstance(int sectionNumber) {
-			PlaceholderFragment fragment = new PlaceholderFragment();
-			Bundle args = new Bundle();
-			args.putInt(ARG_SECTION_NUMBER, sectionNumber);
-			fragment.setArguments(args);
+		public static ProjectsFragment newInstance() {
+			ProjectsFragment fragment = new ProjectsFragment();
+
 			return fragment;
 		}
 
-		public PlaceholderFragment() {
+		public ProjectsFragment() {
 		}
 
 		@Override
 		public View onCreateView(LayoutInflater inflater, ViewGroup container,
 				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_overview,
+			View rootView = inflater.inflate(R.layout.fragment_projects,
 					container, false);
+			
+			System.out.println("Bla");
+			
+			return rootView;
+		}
+	}
+	
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class NextActionFragment extends Fragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		private static final String ARG_SECTION_NUMBER = "section_number";
+
+		/**
+		 * Returns a new instance of this fragment for the given section number.
+		 */
+		public static NextActionFragment newInstance() {
+			NextActionFragment fragment = new NextActionFragment();
+
+			return fragment;
+		}
+
+		public NextActionFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_next_action,
+					container, false);
+			
+			System.out.println("Bla");
+			
+			return rootView;
+		}
+	}
+	/**
+	 * A placeholder fragment containing a simple view.
+	 */
+	public static class LaterMaybeFragment extends Fragment {
+		/**
+		 * The fragment argument representing the section number for this
+		 * fragment.
+		 */
+		private static final String ARG_SECTION_NUMBER = "section_number";
+
+		/**
+		 * Returns a new instance of this fragment for the given section number.
+		 */
+		public static LaterMaybeFragment newInstance() {
+			LaterMaybeFragment fragment = new LaterMaybeFragment();
+
+			return fragment;
+		}
+
+		public LaterMaybeFragment() {
+		}
+
+		@Override
+		public View onCreateView(LayoutInflater inflater, ViewGroup container,
+				Bundle savedInstanceState) {
+			View rootView = inflater.inflate(R.layout.fragment_later_maybe,
+					container, false);
+			
+			System.out.println("Bla");
+			
 			return rootView;
 		}
 	}
