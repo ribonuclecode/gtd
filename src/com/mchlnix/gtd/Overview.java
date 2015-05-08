@@ -2,22 +2,21 @@ package com.mchlnix.gtd;
 
 import java.util.Locale;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.os.Bundle;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+@SuppressWarnings("deprecation")
 public class Overview extends ActionBarActivity implements
 		ActionBar.TabListener {
 
@@ -90,7 +89,6 @@ public class Overview extends ActionBarActivity implements
 		// Handle action bar item clicks here. The action bar will
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
 
 		return super.onOptionsItemSelected(item);
 	}
@@ -162,12 +160,6 @@ public class Overview extends ActionBarActivity implements
 	 */
 	public static class ProjectsFragment extends Fragment {
 		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-
-		/**
 		 * Returns a new instance of this fragment for the given section number.
 		 */
 		public static ProjectsFragment newInstance() {
@@ -196,12 +188,6 @@ public class Overview extends ActionBarActivity implements
 	 */
 	public static class NextActionFragment extends Fragment {
 		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-
-		/**
 		 * Returns a new instance of this fragment for the given section number.
 		 */
 		public static NextActionFragment newInstance() {
@@ -228,12 +214,6 @@ public class Overview extends ActionBarActivity implements
 	 * A placeholder fragment containing a simple view.
 	 */
 	public static class LaterMaybeFragment extends Fragment {
-		/**
-		 * The fragment argument representing the section number for this
-		 * fragment.
-		 */
-		private static final String ARG_SECTION_NUMBER = "section_number";
-
 		/**
 		 * Returns a new instance of this fragment for the given section number.
 		 */
