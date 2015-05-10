@@ -214,8 +214,8 @@ public class Overview extends ActionBarActivity implements
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_next_action,
 					container, false);
-			
-			System.out.println("Bla");
+
+			((LinearLayout) rootView.findViewById( R.id.LinearLayout2 ) ).addView( new CreateActionWidget( getActivity() ) );
 			
 			return rootView;
 		}
