@@ -18,6 +18,7 @@ public class CreateActionWidget extends LinearLayout {
 		
 		this.edit = new EditText( context );
 		this.edit.setLayoutParams( new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1 ) );
+		this.setMinimumHeight( 80 );
 		
 		this.edit.requestFocus();
 		
