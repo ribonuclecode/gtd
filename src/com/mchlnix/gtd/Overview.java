@@ -137,8 +137,8 @@ public class Overview extends ActionBarActivity implements
 			// Return a PlaceholderFragment (defined as a static inner class
 			// below).
 			switch(position) {
-			case 0: return NextActionFragment.newInstance();
-			case 1: return ProjectsFragment.newInstance();
+			case 0: return ProjectsFragment.newInstance();
+			case 1: return NextActionFragment.newInstance();
 			case 2: return LaterMaybeFragment.newInstance();
 			}
 			return null;
