@@ -48,8 +48,9 @@ public class CreateActionWidget extends LinearLayout {
 		if ( action.trim().isEmpty() )
 			return;
 		
-		list.removeViewAt( position );
-		list.addView( new NextActionWidget( this.context, this.edit.getText().toString() ), position );
+		//list.removeViewAt( position );
+		list.addView( new NextActionWidget( this.context, this.edit.getText().toString() ), position-1 );
+		this.edit.setText("");
 		
 	}
 
