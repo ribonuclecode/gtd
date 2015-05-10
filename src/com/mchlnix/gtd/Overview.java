@@ -16,7 +16,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 @SuppressWarnings("deprecation")
 public class Overview extends ActionBarActivity implements
@@ -112,12 +111,12 @@ public class Overview extends ActionBarActivity implements
 	public void onTabReselected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
 	}
-	
+
 	public void addAction( View v ) {
 		LinearLayout actionList = (LinearLayout) v.getParent();
-		
+
 		CreateActionWidget action = new CreateActionWidget( this );
-		
+
 		actionList.addView( action, actionList.getChildCount() -1 );
 	}
 
@@ -164,7 +163,7 @@ public class Overview extends ActionBarActivity implements
 			return null;
 		}
 	}
-	
+
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
@@ -186,13 +185,13 @@ public class Overview extends ActionBarActivity implements
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_projects,
 					container, false);
-			
+
 			System.out.println("Bla");
-			
+
 			return rootView;
 		}
 	}
-	
+
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */
@@ -216,7 +215,7 @@ public class Overview extends ActionBarActivity implements
 					container, false);
 
 			((LinearLayout) rootView.findViewById( R.id.LinearLayout2 ) ).addView( new CreateActionWidget( getActivity() ) );
-			
+
 			return rootView;
 		}
 	}
@@ -241,9 +240,9 @@ public class Overview extends ActionBarActivity implements
 				Bundle savedInstanceState) {
 			View rootView = inflater.inflate(R.layout.fragment_later_maybe,
 					container, false);
-			
+
 			System.out.println("Bla");
-			
+
 			return rootView;
 		}
 	}
