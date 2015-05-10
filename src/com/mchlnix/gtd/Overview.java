@@ -241,7 +241,7 @@ public class Overview extends ActionBarActivity implements
 			View rootView = inflater.inflate(R.layout.fragment_later_maybe,
 					container, false);
 
-			System.out.println("Bla");
+			((LinearLayout) rootView.findViewById( R.id.LinearLayout3 ) ).addView( new CreateActionWidget( getActivity() ) );
 
 			return rootView;
 		}
