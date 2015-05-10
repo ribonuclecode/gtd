@@ -15,6 +15,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 @SuppressWarnings("deprecation")
 public class Overview extends ActionBarActivity implements
@@ -109,6 +111,14 @@ public class Overview extends ActionBarActivity implements
 	@Override
 	public void onTabReselected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
+	}
+	
+	public void addAction( View v ) {
+		LinearLayout actionList = (LinearLayout) v.getParent();
+		
+		CreateActionWidget action = new CreateActionWidget( this );
+		
+		actionList.addView( action, actionList.getChildCount() -1 );
 	}
 
 	/**
