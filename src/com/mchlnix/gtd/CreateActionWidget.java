@@ -1,6 +1,7 @@
 package com.mchlnix.gtd;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -27,6 +28,12 @@ public class CreateActionWidget extends LinearLayout {
 		this.addView( edit );
 
 		ImageView add = new ImageView( context );
+
+		LayoutParams params = new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT );
+		params.gravity = Gravity.CENTER;
+		add.setLayoutParams( params );
+
+		add.setPadding(0, 0, add.getPaddingRight()+5, 0 );
 		add.setImageResource( android.R.drawable.ic_input_add );
 		add.setOnClickListener( new OnClickListener() {
 
