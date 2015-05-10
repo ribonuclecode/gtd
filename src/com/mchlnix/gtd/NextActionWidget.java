@@ -1,6 +1,7 @@
 package com.mchlnix.gtd;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,16 +15,22 @@ public class NextActionWidget extends LinearLayout {
 		this.setOrientation( LinearLayout.HORIZONTAL );
 
 		TextView action = new TextView( context );
+
+		LayoutParams params = new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1 );
+		params.gravity = Gravity.CENTER_VERTICAL;
+
 		action.setText( text );
-		action.setTextAppearance( context, android.R.style.TextAppearance_Large );
-		action.setLayoutParams( new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, 1 ) );
+		action.setLayoutParams( params );
 
 		this.addView( action );
 
 		ImageView remove = new ImageView( context );
 
+		params = new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT );
+		params.gravity = Gravity.CENTER_VERTICAL;
+
 		remove.setImageResource( R.drawable.check );
-		remove.setLayoutParams( new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT ) );
+		remove.setLayoutParams( params );
 		remove.setOnClickListener( new OnClickListener() {
 
 			@Override
