@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class NextActionWidget extends LinearLayout {
+public class ActionWidget extends LinearLayout {
 
-	public NextActionWidget(Context context, String text ) {
+	public ActionWidget(Context context, String text ) {
 		super(context);
 
 		this.setOrientation( LinearLayout.HORIZONTAL );
