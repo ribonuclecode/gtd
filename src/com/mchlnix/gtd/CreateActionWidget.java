@@ -18,7 +18,8 @@ public class CreateActionWidget extends LinearLayout {
 		this.context = context;
 
 		this.edit = new EditText( context );
-		this.edit.setLayoutParams( new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT, 1 ) );
+		this.edit.setLayoutParams( new LayoutParams( LayoutParams.WRAP_CONTENT,
+				LayoutParams.MATCH_PARENT, 1 ) );
 		this.setMinimumHeight( 80 );
 
 		this.edit.requestFocus();
@@ -29,11 +30,12 @@ public class CreateActionWidget extends LinearLayout {
 
 		ImageView add = new ImageView( context );
 
-		LayoutParams params = new LayoutParams( LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT );
+		LayoutParams params = new LayoutParams( LayoutParams.WRAP_CONTENT,
+				LayoutParams.MATCH_PARENT );
 		params.gravity = Gravity.CENTER;
 		add.setLayoutParams( params );
 
-		add.setPadding(0, 0, add.getPaddingRight()+5, 0 );
+		add.setPadding(0, 0, add.getPaddingRight(), 0 );
 		add.setImageResource( android.R.drawable.ic_input_add );
 		add.setOnClickListener( new OnClickListener() {
 
@@ -56,7 +58,9 @@ public class CreateActionWidget extends LinearLayout {
 			return;
 
 		//list.removeViewAt( position );
-		list.addView( new NextActionWidget( this.context, this.edit.getText().toString() ), position-1 );
+		list.addView( new ActionWidget( this.context,
+				this.edit.getText().toString() ),
+				position-1 );
 		this.edit.setText("");
 
 	}

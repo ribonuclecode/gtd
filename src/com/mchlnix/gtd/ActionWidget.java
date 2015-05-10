@@ -13,6 +13,10 @@ public class ActionWidget extends LinearLayout {
 		super(context);
 
 		this.setOrientation( LinearLayout.HORIZONTAL );
+		this.setPadding( this.getPaddingLeft(),
+				this.getPaddingTop(),
+				this.getPaddingRight()+5,
+				this.getPaddingBottom()+5 );
 
 		TextView action = new TextView( context );
 
